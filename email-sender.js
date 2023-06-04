@@ -14,7 +14,7 @@ export async function sendEmailNotification() {
 
   let info = await transporter.sendMail({
     from: `"You" <${process.env.EMAIL_USER}>`,
-    to: process.env.EMAIL_USER,
+    to: process.env.EMAIL_RECEPIENT,
     subject: "Files detected in your SFTP directory",
     html: `
       <p>sftp-file-notifier service as detected 1 or more files in your SFTP directory.</p>
